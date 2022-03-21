@@ -10,7 +10,7 @@
 
 h1 {
     text-transform: uppercase;
-    margin: auto;
+    margin-left: 10px;
 }
 
 #color-palette {
@@ -25,18 +25,39 @@ h1 {
     margin: 10px;
 }
 
-.color.black {
+.color.color1 {
     background-color: black;
 }
 
-.color.red {
+.color.color2 {
     background-color: red;
 }
 
-.color.green {
+.color.color3 {
     background-color: green;
 }
 
-.color.blue {
+.color.color4 {
     background-color: blue;
+}
+
+#pixel-board {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
 }
