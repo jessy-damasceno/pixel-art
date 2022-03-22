@@ -1,3 +1,19 @@
+function randomColors(cores) {
+  const paletaDeCores = ['rgb(0, 0, 0)'];
+  const newColors = document.getElementsByClassName('color');
+  for (let i = 0; i < cores; i += 1) {
+    const r = Math.floor(Math.random() * 251);
+    const g = Math.floor(Math.random() * 251);
+    const b = Math.floor(Math.random() * 251);
+    paletaDeCores.push(`rgb(${r}, ${g}, ${b})`); // MODELO: rgb(68, 98, 105)
+  }
+  for (let j = 0; j < newColors.length; j += 1) {
+    newColors[j].style.backgroundColor = paletaDeCores[j];
+  }
+}
+
+randomColors(3);
+
 function criarPixels(n) {
   const linha = document.getElementsByClassName('linha');
   for (let i = 0; i < n; i += 1) {
@@ -37,10 +53,10 @@ function changeColorSelected() {
 
 changeColorSelected();
 
-function pixelColor(event) {
+function pixelColor(e) {
   const x = document.querySelector('.selected');
   const color = getComputedStyle(x).getPropertyValue('background-color');
-  event.target.style.backgroundColor = color;
+  e.target.style.backgroundColor = color;
 }
 
 function changePixelColor() {
