@@ -10,12 +10,16 @@
 
 h1 {
     text-transform: uppercase;
-    margin-left: 10px;
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
 }
 
 #color-palette {
     display: flex;
     flex-direction: row;
+    max-width: fit-content;
+    margin: auto;
 }
 
 .color {
@@ -25,19 +29,27 @@ h1 {
     margin: 10px;
 }
 
-.color.color1 {
+.color:active {
+    border: 1px solid white;
+}
+
+.color:hover {
+    cursor: pointer;
+}
+
+#color1 {
     background-color: black;
 }
 
-.color.color2 {
+#color2 {
     background-color: red;
 }
 
-.color.color3 {
+#color3 {
     background-color: green;
 }
 
-.color.color4 {
+#color4 {
     background-color: blue;
 }
 
@@ -60,4 +72,8 @@ h1 {
     height: 40px;
     border: 1px solid black;
     background-color: white;
+}
+
+.pixel:hover {
+    cursor: crosshair;
 }
