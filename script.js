@@ -42,8 +42,8 @@ function changeColorSelected() {
 changeColorSelected();
 
 function pixelColor(event) {
-  let x = document.querySelector('.selected');
-  let color = getComputedStyle(x).getPropertyValue('background-color');
+  const x = document.querySelector('.selected');
+  const color = getComputedStyle(x).getPropertyValue('background-color');
   event.target.style.backgroundColor = color;
 }
 
@@ -54,3 +54,24 @@ function changePixelColor() {
 }
 
 changePixelColor();
+
+/* 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+O que será verificado:
+Verifica se o botão tem o id denominado clear-board
+Verifica se o botão está posicionado entre a paleta de cores e o quadro de pixels
+Verifica se o texto do botão é 'Limpar'
+Verifica se ao clicar no botão, o quadro de pixels é totalmente preenchido de branco */
+
+function limpar() {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+}
+
+function btn() {
+  const btn = document.getElementById('clear-board');
+  btn.addEventListener('click', limpar);
+}
+
+btn();
