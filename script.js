@@ -24,6 +24,7 @@ function criarPixels(n) {
 }
 
 function criarQuadro(n) {
+  // eslint-disable-next-line sonarjs/no-duplicate-string
   const board = document.getElementById('pixel-board');
 
   for (let i = 0; i < n; i += 1) {
