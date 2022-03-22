@@ -1,7 +1,7 @@
-function randomColors(cores) {
+function randomColors() {
   const paletaDeCores = ['rgb(0, 0, 0)'];
   const newColors = document.getElementsByClassName('color');
-  for (let i = 0; i < cores; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const r = Math.floor(Math.random() * 251);
     const g = Math.floor(Math.random() * 251);
     const b = Math.floor(Math.random() * 251);
@@ -12,7 +12,7 @@ function randomColors(cores) {
   }
 }
 
-randomColors(3);
+randomColors();
 
 function criarPixels(n) {
   const linha = document.getElementsByClassName('linha');
@@ -109,6 +109,7 @@ function generateInput() {
   }
   document.getElementById('pixel-board').innerHTML = '';
   criarQuadro(valor);
+  randomColors();
 }
 
 const vqv = document.getElementById('generate-board');
