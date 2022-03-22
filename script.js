@@ -1,5 +1,3 @@
-document.querySelector('.color').classList.add('selected');
-
 function criarPixels(n) {
   const linha = document.getElementsByClassName('linha');
   for (let i = 0; i < n; i += 1) {
@@ -22,9 +20,7 @@ function criarQuadro(n) {
   }
 }
 
-let n = 5; // TAMANHO INICIAL DO PIXEL BOARD
-
-criarQuadro(n);
+criarQuadro(5);
 
 function selectColor(event) {
   const colors = document.body.getElementsByClassName('color');
@@ -70,8 +66,36 @@ function limpar() {
 }
 
 function btn() {
-  const btn = document.getElementById('clear-board');
-  btn.addEventListener('click', limpar);
+  const button = document.getElementById('clear-board');
+  button.addEventListener('click', limpar);
 }
 
 btn();
+
+/* 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
+Se nenhum valor for colocado no input ao clicar no botão, mostre um alert com o texto: "Board inválido!";
+Verifica se o novo quadro tem todos os pixels preenchidos com a cor branca */
+
+function generateInput() {
+  let valor = document.getElementById('board-size').value;
+
+  limpar();
+
+  if (!valor) {
+    alert('Board inválido!');
+    return;
+  }
+  if (valor > 50) {
+    valor = 50;
+  }
+  if (valor < 5) {
+    valor = 5;
+  }
+  document.getElementById('pixel-board').innerHTML = '';
+  criarQuadro(valor);
+}
+
+const vqv = document.getElementById('generate-board');
+vqv.addEventListener('click', generateInput);
+
+document.querySelector('.color').classList.add('selected');

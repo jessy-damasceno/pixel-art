@@ -16,7 +16,6 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 40px;
-    margin: 20px;
 }
 
 #color-palette {
@@ -82,15 +81,35 @@ h1 {
     cursor: crosshair;
 }
 
-#clear-board {
+#clear-board, #generate-board {
     background-color: rgb(68, 98, 105);
     color: white;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.8rem;
     display: flex;
-    margin: auto;
-    padding: 6px;
-    margin-top: 10px;
-    border-radius: 4px;
+    padding: 8px;
+    margin: 0px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.board-length {
+    display: flex;
+    align-items: center;
 
 }
+
+#board-size {
+    border-radius: 6px;
+    display: flex;
+    cursor: pointer;
+    height: 25px;
+    width: 200px;
+}
+
