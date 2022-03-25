@@ -24,9 +24,7 @@ function criarPixels(n) {
 }
 
 function criarQuadro(n) {
-  // eslint-disable-next-line sonarjs/no-duplicate-string
-  const board = document.getElementById('pixel-board');
-
+  const board = document.querySelector('#pixel-board');
   for (let i = 0; i < n; i += 1) {
     const novaLinha = document.createElement('div');
     novaLinha.classList = 'linha';
@@ -36,8 +34,6 @@ function criarQuadro(n) {
     criarPixels(n);
   }
 }
-
-criarQuadro(5);
 
 function selectColor(event) {
   const colors = document.body.getElementsByClassName('color');
@@ -117,3 +113,7 @@ const vqv = document.getElementById('generate-board');
 vqv.addEventListener('click', generateInput);
 
 document.querySelector('.color').classList.add('selected');
+
+window.onload = () => {
+  criarQuadro(5);
+};
