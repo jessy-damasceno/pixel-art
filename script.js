@@ -4,7 +4,7 @@ function randomColors() {
   for (let i = 0; i < 3; i += 1) {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 251);
+    const b = Math.floor(Math.random() * 256);
     paletaDeCores.push(`rgb(${r}, ${g}, ${b})`); // MODELO: rgb(68, 98, 105)
   }
   for (let j = 0; j < newColors.length; j += 1) {
